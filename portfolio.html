@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    /* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #121212;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  background: #1a1a1a;
+  padding: 1rem 0;
+}
+
+header .logo {
+  color: #ffcc00;
+  font-size: 1.5rem;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 0;
+  background: url('hero.jpg') no-repeat center center/cover;
+}
+
+.profile{
+    width: 500px;
+    border-radius: 600px;
+
+}
+
+.hero h2 span {
+  color: #ffcc00;
+}
+
+/* About, Services, and Portfolio Section */
+.about, .services, .skills, .portfolio, .testimonials, .contact {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+/* Responsive Grids */
+.services-grid, .portfolio-grid, .testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.service-card, .portfolio-item, .testimonial-card {
+  background: #1a1a1a;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.service-card h3, .portfolio-item h3, .testimonial-card h4 {
+  margin-top: 10px;
+  color: #ffcc00;
+}
+
+/* About Section */
+.about-content {
+  text-align: left;
+}
+
+.about ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about ul li {
+  margin-bottom: 10px;
+}
+
+.about .btn {
+  display: inline-block;
+  background: #ffcc00;
+  color: #121212;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Skills Section */
+.skills-list .skill {
+  margin: 20px 0;
+}
+
+.skills-list .progress {
+  background: #333;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skills-list .progress div {
+  height: 10px;
+  background: #ffcc00;
+  border-radius: 5px;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Portfolio Section */
+.portfolio-item img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item img:hover {
+  transform: scale(1.05);
+}
+
+/* Testimonials Section */
+.testimonial-card p {
+  font-style: italic;
+  color: #ccc;
+  margin: 0 0 15px;
+}
+
+/* Contact Section */
+.contact p a {
+  color: #ffcc00;
+}
+
+.contact p {
+  font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+    text-align: center;
+  }
+
+  .about .btn {
+    margin: 15px auto;
+  }
+
+  header nav ul {
+    flex-direction: column;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+}
+</style>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container" style="display: flex;align-items: center ;">
+      <h1 class="logo">Soe Htet</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero" style="display: flex;align-items: center;justify-content: space-between;">
+    <div class="container" >
+      <h2>Hi, I am <span>Soe Htet</span></h2>
+      <p>I am a frontend web developer. I provide clean code, </br>pixel-perfect design, and innovative web solutions.</p>
+      <div class="social-links">
+          <a href="#">Facebook</a>
+          <a href="#">Twitter</a>
+          <a href="#">LinkedIn</a>
+        </div>
+    </div>
+    <img class="profile" src="./65b181f2-315d-4a3f-9223-d73c9fe72772.jpg" alt="">
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-content">
+        <h2>About Me</h2>
+        
+        <p>Hi there! I'm Soe Htet, a passionate developer specializing in web development and UI/UX design. With years of experience, I bring creative solutions to life with code.</p>
+        <ul>
+          <li>Birthday: December 6, 2005</li>
+          <li>Phone: +9 446604002</li>
+          <li>Email: soehtetlinoo@gmail.com</li>
+          <li>Language: English , Burmese</li>
+        </ul>
+        <a href="#" class="btn">Download CV</a>
+      </div>
+      <div class="about-image">
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2>Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Sketches</h3>
+          <p>Clean and effective design concepts.</p>
+        </div>
+        <div class="service-card">
+          <h3>UI/UX Design</h3>
+          <p>User-centered, functional interfaces.</p>
+        </div>
+        <div class="service-card">
+          <h3>Product Design</h3>
+          <p>Innovative and practical product designs.</p>
+        </div>
+        <div class="service-card">
+          <h3>Motion Graphics</h3>
+          <p>Engaging and dynamic motion visuals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2>My Skills</h2>
+      <div class="skills-list">
+        <div class="skill">
+          <h3>HTML & CSS</h3>
+          <div class="progress">
+            <div style="width: 90%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <h3>JavaScript</h3>
+          <div class="progress">
+            <div style="width: 85%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <h3>Responsive Design</h3>
+          <div class="progress">
+            <div style="width: 80%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <h2>Portfolio</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <img src="./b3d66fc3-a189-43b5-b3f9-3e34efb14131.jpg" alt="Project 1">
+          <h3>Project 1</h3>
+        </div>
+        <div class="portfolio-item">
+          <img src="./Why C++ is so popular among game developers_ _ Geekboots.jpg" alt="Project 2">
+          <h3>Project 2</h3>
+        </div>
+        <div class="portfolio-item">
+          <img src="./Best reads_ Python programming — Raspberry Pi Official Magazine.jpg" alt="Project 3">
+          <h3>Project 3</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <h2>What People Say</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p>"An exceptional professional who delivers outstanding results!"</p>
+          <h4>- Client 1</h4>
+        </div>
+        <div class="testimonial-card">
+          <p>"A true expert in web development and design."</p>
+          <h4>- Client 2</h4>
+        </div>
+        <div class="testimonial-card">
+          <p>"Always delivers projects on time with top-notch quality!"</p>
+          <h4>- Client 3</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:soehtet@gmail.com">soehtetlinoo@gmail.com</a></p>
+      <p>Phone: +9 446604002</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Soe Htet. All rights reserved.</p>
+  </footer>
+</body>
+</html>
